@@ -49,8 +49,10 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
                             <!-- Место для карточки -->
-                             <item-component/>
-                            <div class="best__item">
+                            <product-card/>
+                            <product-card/>
+                            <product-card/>
+                            <!-- <div class="best__item">
                                 <img src="@/assets/img/coffee-2.jpg" alt="coffee">
                                 <div class="best__item-title">
                                     Presto Coffee Beans 1kg
@@ -63,7 +65,7 @@
                                     AROMISTICO Coffee 1kg
                                 </div>
                                 <div class="best__item-price">6.99$</div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -76,10 +78,11 @@
 <script>
 
 import NavBarComponent from '@/components/NavBarComponent.vue';
-import ItemComponent from '@/components/ItemComponent.vue';
+import ProductCard from '@/components/ProductCard.vue';
+
 
 export default {
-    components: {NavBarComponent, ItemComponent},
+    components: {NavBarComponent, ProductCard},
 }
 
 </script>
