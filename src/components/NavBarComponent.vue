@@ -6,7 +6,7 @@
                 </router-link>
             </li>
             <li class="header__item">
-                <router-link to="/our-coffee">Our coffee</router-link>
+                <router-link tag="div" to="/our-coffee">Our coffee</router-link>
                
             </li>
             <li class="header__item">
