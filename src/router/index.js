@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import HeroView from '../views/HeroView.vue'
 import OurCoffeeView from '../views/OurCoffeeView.vue'
 import ForYourPleasure from '../views/ForYourPleasure.vue'
+import ContactUs from '@/views/ContactUs.vue'
+import Thanks from '@/views/Thanks.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +20,14 @@ const routes = [{
     {
         path: '/your-pleasure',
         component: ForYourPleasure
+    },
+    {
+        path: '/contact-us',
+        component: ContactUs
+    },
+    {
+        path: '/thanks',
+        component: Thanks
     },
 
 ]
