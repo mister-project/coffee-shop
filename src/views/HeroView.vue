@@ -55,9 +55,23 @@
                                 <div class="best__item-title">{{productCard[0].text}}</div>
                                 <div class="best__item-price">{{productCard[0].price}}$</div>
                             </div>
+
+                            <div class="best__item">
+                                
+                                <img :src="require(`@/assets/img/${productCard[1].icon}`)" :alt="productCard[1].icon">
+                                <div class="best__item-title">{{productCard[1].text}}</div>
+                                <div class="best__item-price">{{productCard[1].price}}$</div>
+                            </div>
+
+                            <div class="best__item">
+                                
+                                <img :src="require(`@/assets/img/${productCard[2].icon}`)" :alt="productCard[2].icon">
+                                <div class="best__item-title">{{productCard[2].text}}</div>
+                                <div class="best__item-price">{{productCard[2].price}}$</div>
+                            </div>
                             
-                            <product-card />
-                            <product-card />
+                          
+                            <!-- <product-card /> -->
 
                         </div>
                     </div>
@@ -83,27 +97,25 @@ export default {
             productCard: [
                 {
                     id: 0,
-                    icon: 'coffee-1.jpg',                    
-                    text: 'Solimo Coffee Beans 2kg',
+                    icon: 'coffee-1.jpg',                     
+                    text: 'Solimo Coffee Beans 2kg',      
+                    
                     price: '10.73'
                     
                     
                 },
                 {
                     id: 1,
-                    text: 'Our coffee',
-                    link: '/our-coffee',
+                    icon: 'coffee-2.jpg',                     
+                    text: 'Presto Coffee Beans 1kg',
+                    price: '15.99'
                 },
                 {
-                    id: 2,
-                    text: 'For your pleasure',
-                    link: '/your-pleasure',
+                    icon: 'coffee-3.jpg',                    
+                    text: 'AROMISTICO Coffee 1kg',
+                    price: '6.99'
                 },
-                {
-                    id: 3,
-                    text: 'Contact us',
-                    link: '/contact-us',
-                },
+                
             ]
         }
     }
