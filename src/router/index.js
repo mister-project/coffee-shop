@@ -10,27 +10,29 @@ import Thanks from '@/views/Thanks.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-        path: '/',
-        component: HeroView
-    },
-    {
-        path: '/our-coffee',
-        component: OurCoffeeView
-    },
-    {
-        path: '/your-pleasure',
-        component: ForYourPleasure
-    },
-    {
-        path: '/contact-us',
-        component: ContactUs
-    },
-    {
-        path: '/thanks',
-        component: Thanks
-    },
+    path: '/',
+    component: HeroView
+},
+{
+    path: '/our-coffee',
+    component: OurCoffeeView
+},
+{
+    path: '/your-pleasure',
+    component: ForYourPleasure
+},
+{
+    path: '/contact-us',
+    component: ContactUs
+},
+{
+    path: '/thanks',
+    component: Thanks
+},
 
 ]
+
+// 123
 
 const router = new VueRouter({
     mode: 'history',
