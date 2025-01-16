@@ -32,8 +32,6 @@ const routes = [{
 
 ]
 
-// 123
-
 const router = new VueRouter({
     mode: 'history',
     routes
