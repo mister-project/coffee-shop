@@ -1,10 +1,10 @@
 <template>
     <main>
-  <div class="preview">
+        <div class="preview">
             <div class="container">
                 <div class="row">
                     <div class="col">
-                     <nav-bar-component/>   
+                        <nav-bar-component />
                     </div>
                 </div>
                 <div class="row">
@@ -49,17 +49,23 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
                             <!-- Место для карточки -->
-                            <product-card/>
-                            <product-card/>
-                            <product-card/>
+                            <div class="best__item">
+                                
+                                <img :src="require(`@/assets/img/${productCard[0].icon}`)" :alt="productCard[0].icon">
+                                <div class="best__item-title">{{productCard[0].text}}</div>
+                                <div class="best__item-price">{{productCard[0].price}}$</div>
+                            </div>
                             
+                            <product-card />
+                            <product-card />
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
- </main> 
+
+    </main>
 </template>
 
 <script>
@@ -69,7 +75,37 @@ import ProductCard from '@/components/ProductCard.vue';
 
 
 export default {
-    components: {NavBarComponent, ProductCard},
-}
+    components: { NavBarComponent, ProductCard },
 
+
+    data() {
+        return {
+            productCard: [
+                {
+                    id: 0,
+                    icon: 'coffee-1.jpg',                    
+                    text: 'Solimo Coffee Beans 2kg',
+                    price: '10.73'
+                    
+                    
+                },
+                {
+                    id: 1,
+                    text: 'Our coffee',
+                    link: '/our-coffee',
+                },
+                {
+                    id: 2,
+                    text: 'For your pleasure',
+                    link: '/your-pleasure',
+                },
+                {
+                    id: 3,
+                    text: 'Contact us',
+                    link: '/contact-us',
+                },
+            ]
+        }
+    }
+}
 </script>
