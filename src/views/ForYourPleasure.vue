@@ -37,52 +37,52 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[0].icon}`)" :alt="productCard[0].icon">
+                                <img :src="require(`@/assets/img/${goods[0].icon}`)" :alt="goods[0].icon">
                                 <div class="shop__item-title">
-                                {{productCard[0].text}}
+                                {{goods[0].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[0].country}}</div>
-                                <div class="shop__item-price">{{productCard[0].price}}$</div>
+                                <div class="shop__item-country">{{goods[0].country}}</div>
+                                <div class="shop__item-price">{{goods[0].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[1].icon}`)" :alt="productCard[1].icon">
+                                <img :src="require(`@/assets/img/${goods[1].icon}`)" :alt="goods[1].icon">
                                 <div class="shop__item-title">
-                                {{productCard[1].text}}
+                                {{goods[1].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[1].country}}</div>
-                                <div class="shop__item-price">{{productCard[1].price}}$</div>
+                                <div class="shop__item-country">{{goods[1].country}}</div>
+                                <div class="shop__item-price">{{goods[1].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[2].icon}`)" :alt="productCard[2].icon">
+                                <img :src="require(`@/assets/img/${goods[2].icon}`)" :alt="goods[2].icon">
                                 <div class="shop__item-title">
-                                {{productCard[2].text}}
+                                {{goods[2].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[2].country}}</div>
-                                <div class="shop__item-price">{{productCard[2].price}}$</div>
+                                <div class="shop__item-country">{{goods[2].country}}</div>
+                                <div class="shop__item-price">{{goods[2].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[3].icon}`)" :alt="productCard[3].icon">
+                                <img :src="require(`@/assets/img/${goods[3].icon}`)" :alt="goods[3].icon">
                                 <div class="shop__item-title">
-                                {{productCard[3].text}}
+                                {{goods[3].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[3].country}}</div>
-                                <div class="shop__item-price">{{productCard[3].price}}$</div>
+                                <div class="shop__item-country">{{goods[3].country}}</div>
+                                <div class="shop__item-price">{{goods[3].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[4].icon}`)" :alt="productCard[4].icon">
+                                <img :src="require(`@/assets/img/${goods[4].icon}`)" :alt="goods[4].icon">
                                 <div class="shop__item-title">
-                                {{productCard[4].text}}
+                                {{goods[4].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[4].country}}</div>
-                                <div class="shop__item-price">{{productCard[4].price}}$</div>
+                                <div class="shop__item-country">{{goods[4].country}}</div>
+                                <div class="shop__item-price">{{goods[4].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[5].icon}`)" :alt="productCard[5].icon">
+                                <img :src="require(`@/assets/img/${goods[5].icon}`)" :alt="goods[5].icon">
                                 <div class="shop__item-title">
-                                {{productCard[5].text}}
+                                {{goods[5].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[5].country}}</div>
-                                <div class="shop__item-price">{{productCard[5].price}}$</div>
+                                <div class="shop__item-country">{{goods[5].country}}</div>
+                                <div class="shop__item-price">{{goods[5].price}}$</div>
                             </div>
                           
                         </div>
@@ -101,7 +101,7 @@ export default {
     components: {NavBarComponent, ProductCard},
     data() {
         return {
-            productCard: [
+            goods: [
                 {
                     id: 0,
                     icon: 'good-1.jpg',                     

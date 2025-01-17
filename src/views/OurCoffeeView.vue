@@ -56,52 +56,52 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[0].icon}`)" :alt="productCard[0].icon">
+                                <img :src="require(`@/assets/img/${coffee[0].icon}`)" :alt="coffee[0].icon">
                                 <div class="shop__item-title">
-                                {{productCard[0].text}}
+                                {{coffee[0].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[0].country}}</div>
-                                <div class="shop__item-price">{{productCard[0].price}}$</div>
+                                <div class="shop__item-country">{{coffee[0].country}}</div>
+                                <div class="shop__item-price">{{coffee[0].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[1].icon}`)" :alt="productCard[1].icon">
+                                <img :src="require(`@/assets/img/${coffee[1].icon}`)" :alt="coffee[1].icon">
                                 <div class="shop__item-title">
-                                {{productCard[1].text}}
+                                {{coffee[1].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[1].country}}</div>
-                                <div class="shop__item-price">{{productCard[1].price}}$</div>
+                                <div class="shop__item-country">{{coffee[1].country}}</div>
+                                <div class="shop__item-price">{{coffee[1].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[2].icon}`)" :alt="productCard[2].icon">
+                                <img :src="require(`@/assets/img/${coffee[2].icon}`)" :alt="coffee[2].icon">
                                 <div class="shop__item-title">
-                                {{productCard[2].text}}
+                                {{coffee[2].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[2].country}}</div>
-                                <div class="shop__item-price">{{productCard[2].price}}$</div>
+                                <div class="shop__item-country">{{coffee[2].country}}</div>
+                                <div class="shop__item-price">{{coffee[2].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[3].icon}`)" :alt="productCard[3].icon">
+                                <img :src="require(`@/assets/img/${coffee[3].icon}`)" :alt="coffee[3].icon">
                                 <div class="shop__item-title">
-                                {{productCard[3].text}}
+                                {{coffee[3].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[3].country}}</div>
-                                <div class="shop__item-price">{{productCard[3].price}}$</div>
+                                <div class="shop__item-country">{{coffee[3].country}}</div>
+                                <div class="shop__item-price">{{coffee[3].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[4].icon}`)" :alt="productCard[4].icon">
+                                <img :src="require(`@/assets/img/${coffee[4].icon}`)" :alt="coffee[4].icon">
                                 <div class="shop__item-title">
-                                {{productCard[4].text}}
+                                {{coffee[4].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[4].country}}</div>
-                                <div class="shop__item-price">{{productCard[4].price}}$</div>
+                                <div class="shop__item-country">{{coffee[4].country}}</div>
+                                <div class="shop__item-price">{{coffee[4].price}}$</div>
                             </div>
                             <div class="shop__item">                                
-                                <img :src="require(`@/assets/img/${productCard[5].icon}`)" :alt="productCard[5].icon">
+                                <img :src="require(`@/assets/img/${coffee[5].icon}`)" :alt="coffee[5].icon">
                                 <div class="shop__item-title">
-                                {{productCard[5].text}}
+                                {{coffee[5].text}}
                                 </div>
-                                <div class="shop__item-country">{{productCard[5].country}}</div>
-                                <div class="shop__item-price">{{productCard[5].price}}$</div>
+                                <div class="shop__item-country">{{coffee[5].country}}</div>
+                                <div class="shop__item-price">{{coffee[5].price}}$</div>
                             </div>
                             <!-- <product-card/>
                             <product-card/>
@@ -125,7 +125,7 @@ export default {
     components: {NavBarComponent, ProductCard},
     data() {
         return {
-            productCard: [
+            coffee: [
                 {
                     id: 0,
                     icon: 'coffee-3.jpg',                     

@@ -51,23 +51,23 @@
                             <!-- Место для карточки -->
                             <div class="best__item">
                                 
-                                <img :src="require(`@/assets/img/${productCard[0].icon}`)" :alt="productCard[0].icon">
-                                <div class="best__item-title">{{productCard[0].text}}</div>
-                                <div class="best__item-price">{{productCard[0].price}}$</div>
+                                <img :src="require(`@/assets/img/${bestProduct[0].image}`)" :alt="bestProduct[0].image">
+                                <div class="best__item-title">{{bestProduct[0].name}}</div>
+                                <div class="best__item-price">{{bestProduct[0].price}}$</div>
                             </div>
 
                             <div class="best__item">
                                 
-                                <img :src="require(`@/assets/img/${productCard[1].icon}`)" :alt="productCard[1].icon">
-                                <div class="best__item-title">{{productCard[1].text}}</div>
-                                <div class="best__item-price">{{productCard[1].price}}$</div>
+                                <img :src="require(`@/assets/img/${bestProduct[1].image}`)" :alt="bestProduct[1].image">
+                                <div class="best__item-title">{{bestProduct[1].name}}</div>
+                                <div class="best__item-price">{{bestProduct[1].price}}$</div>
                             </div>
 
                             <div class="best__item">
                                 
-                                <img :src="require(`@/assets/img/${productCard[2].icon}`)" :alt="productCard[2].icon">
-                                <div class="best__item-title">{{productCard[2].text}}</div>
-                                <div class="best__item-price">{{productCard[2].price}}$</div>
+                                <img :src="require(`@/assets/img/${bestProduct[2].image}`)" :alt="bestProduct[2].image">
+                                <div class="best__item-title">{{bestProduct[2].name}}</div>
+                                <div class="best__item-price">{{bestProduct[2].price}}$</div>
                             </div>
                             
                           
@@ -91,28 +91,27 @@ import ProductCard from '@/components/ProductCard.vue';
 export default {
     components: { NavBarComponent, ProductCard },
 
-
     data() {
         return {
-            productCard: [
+            bestProduct: [
                 {
                     id: 0,
-                    icon: 'coffee-1.jpg',                     
-                    text: 'Solimo Coffee Beans 2kg',      
-                    
+                    image: 'coffee-1.jpg',                     
+                    name: 'Solimo Coffee Beans 2kg',                 
                     price: '10.73'
                     
                     
                 },
                 {
                     id: 1,
-                    icon: 'coffee-2.jpg',                     
-                    text: 'Presto Coffee Beans 1kg',
+                    image: 'coffee-2.jpg',                     
+                    name: 'Presto Coffee Beans 1kg',
                     price: '15.99'
                 },
                 {
-                    icon: 'coffee-3.jpg',                    
-                    text: 'AROMISTICO Coffee 1kg',
+                    id: 2,
+                    image: 'coffee-3.jpg',                    
+                    name: 'AROMISTICO Coffee 1kg',
                     price: '6.99'
                 },
                 
