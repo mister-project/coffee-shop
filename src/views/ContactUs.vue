@@ -4,10 +4,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <nav-bar-component/>   
+                        <nav-bar-component />
                     </div>
                 </div>
-                <h1 class="title-big">Contact us</h1>
+                <!-- Техт в шапке - h1 -->
+                <head-text-component classHeadText="title-big" :text="headsText[0].text" />
             </div>
         </div>
         <section class="contacts">
@@ -76,17 +77,29 @@
                 </div>
             </div>
         </section>
-        
+
     </main>
 </template>
 
 <script>
 
+import HeadTextComponent from '@/components/HeadTextComponent.vue';
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import ProductCard from '@/components/ProductCard.vue';
 
 export default {
-    components: { NavBarComponent, ProductCard },
-}
+    components: { NavBarComponent, ProductCard, HeadTextComponent },
+    data() {
+        return {
+
+            headsText: [
+                {
+                    text: "Contact us"
+                }
+            ]
+        };
+    },
+};
+
 
 </script>

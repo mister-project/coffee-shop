@@ -7,26 +7,20 @@
             <nav-bar-component />
           </div>
         </div>
-        <h1 class="title-big">For your pleasure</h1>
+
+        <!-- Техт в шапке - H1 -->
+        <head-text-component classHeadText="title-big" :text="headsText[0].text" />
       </div>
     </div>
     <section class="shop">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img
-              class="shop__girl"
-              src="@/assets/img/coffee_goods.jpg"
-              alt="girl"
-            />
+            <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl" />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -48,42 +42,18 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card
-                classItem="shop__item"
-                :name="goods[0].name"
-                :price="goods[0].price"
-                :image="goods[0].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[1].name"
-                :price="goods[1].price"
-                :image="goods[1].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[2].name"
-                :price="goods[2].price"
-                :image="goods[2].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[3].name"
-                :price="goods[3].price"
-                :image="goods[3].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[4].name"
-                :price="goods[4].price"
-                :image="goods[4].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="goods[5].name"
-                :price="goods[5].price"
-                :image="goods[5].image"
-              />
+              <product-card classItem="shop__item" :name="goods[0].name" :price="goods[0].price"
+                :image="goods[0].image" />
+              <product-card classItem="shop__item" :name="goods[1].name" :price="goods[1].price"
+                :image="goods[1].image" />
+              <product-card classItem="shop__item" :name="goods[2].name" :price="goods[2].price"
+                :image="goods[2].image" />
+              <product-card classItem="shop__item" :name="goods[3].name" :price="goods[3].price"
+                :image="goods[3].image" />
+              <product-card classItem="shop__item" :name="goods[4].name" :price="goods[4].price"
+                :image="goods[4].image" />
+              <product-card classItem="shop__item" :name="goods[5].name" :price="goods[5].price"
+                :image="goods[5].image" />
             </div>
           </div>
         </div>
@@ -92,11 +62,12 @@
   </main>
 </template>
 <script>
+import HeadTextComponent from "@/components/HeadTextComponent.vue";
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { NavBarComponent, ProductCard, HeadTextComponent },
   data() {
     return {
       goods: [
@@ -143,6 +114,11 @@ export default {
           price: "10.73",
         },
       ],
+      headsText: [
+        {
+          text: "For your pleasure"
+        }
+      ]
     };
   },
 };

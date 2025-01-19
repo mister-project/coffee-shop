@@ -8,26 +8,19 @@
             <nav-bar-component />
           </div>
         </div>
-        <h1 class="title-big">Our Coffee</h1>
+        <!-- <h1 class="title-big">Our Coffee</h1> -->
+        <head-text-component classHeadText="title-big" :text="headsText[0].text" />
       </div>
     </div>
     <section class="shop">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img
-              class="shop__girl"
-              src="@/assets/img/coffee_girl.jpg"
-              alt="girl"
-            />
+            <img class="shop__girl" src="@/assets/img/coffee_girl.jpg" alt="girl" />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -48,12 +41,7 @@
           <div class="col-lg-4 offset-2">
             <form action="#" class="shop__search">
               <label class="shop__search-label" for="filter">Looking for</label>
-              <input
-                id="filter"
-                type="text"
-                placeholder="start typing here..."
-                class="shop__search-input"
-              />
+              <input id="filter" type="text" placeholder="start typing here..." class="shop__search-input" />
             </form>
           </div>
           <div class="col-lg-4">
@@ -70,42 +58,18 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card
-                classItem="shop__item"
-                :name="coffee[0].name"
-                :price="coffee[0].price"
-                :image="coffee[0].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="coffee[1].name"
-                :price="coffee[1].price"
-                :image="coffee[1].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="coffee[2].name"
-                :price="coffee[2].price"
-                :image="coffee[2].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="coffee[3].name"
-                :price="coffee[3].price"
-                :image="coffee[3].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="coffee[4].name"
-                :price="coffee[4].price"
-                :image="coffee[4].image"
-              />
-              <product-card
-                classItem="shop__item"
-                :name="coffee[5].name"
-                :price="coffee[5].price"
-                :image="coffee[5].image"
-              />
+              <product-card classItem="shop__item" :name="coffee[0].name" :price="coffee[0].price"
+                :image="coffee[0].image" />
+              <product-card classItem="shop__item" :name="coffee[1].name" :price="coffee[1].price"
+                :image="coffee[1].image" />
+              <product-card classItem="shop__item" :name="coffee[2].name" :price="coffee[2].price"
+                :image="coffee[2].image" />
+              <product-card classItem="shop__item" :name="coffee[3].name" :price="coffee[3].price"
+                :image="coffee[3].image" />
+              <product-card classItem="shop__item" :name="coffee[4].name" :price="coffee[4].price"
+                :image="coffee[4].image" />
+              <product-card classItem="shop__item" :name="coffee[5].name" :price="coffee[5].price"
+                :image="coffee[5].image" />
             </div>
           </div>
         </div>
@@ -115,11 +79,12 @@
 </template>
 
 <script>
+import HeadTextComponent from "@/components/HeadTextComponent.vue";
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { NavBarComponent, ProductCard, HeadTextComponent },
   data() {
     return {
       coffee: [
@@ -172,6 +137,11 @@ export default {
           price: "10.73",
         },
       ],
+      headsText: [
+        {
+          text: "Our Coffee"
+        }
+      ]
     };
   },
 };

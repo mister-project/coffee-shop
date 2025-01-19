@@ -1,7 +1,5 @@
 <template>
     <li :class="classLink">
-        <!-- <li :class="header__item"> -->
-        <!-- <div :class="classItem"></div> -->
         <a :href="link">{{ text }}</a>
 
     </li>

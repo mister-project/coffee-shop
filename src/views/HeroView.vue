@@ -9,12 +9,10 @@
         </div>
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
-            <h1 class="title-big">Everything You Love About Coffee</h1>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo.svg"
-              alt="Beans logo"
-            />
+            <!-- Техт в шапке - H1 -->
+            <head-text-component classHeadText="title-big" :text="headsText[0].text" />
+
+            <img class="beanslogo" src="@/assets/logo/Beans_logo.svg" alt="Beans logo" />
             <div class="preview__subtitle">
               We makes every day full of energy and taste
             </div>
@@ -30,11 +28,7 @@
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
             <div class="title">About Us</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="about__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible. Afraid at highly months do things on at.
@@ -61,26 +55,14 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
               <!-- Место для карточек товаров -->
-              <product-card
-                classItem="best__item"
-                :name="bestsellers[0].name"
-                :price="bestsellers[0].price"
-                :image="bestsellers[0].image"
-              />
+              <product-card classItem="best__item" :name="bestsellers[0].name" :price="bestsellers[0].price"
+                :image="bestsellers[0].image" />
 
-              <product-card
-                classItem="best__item"
-                :name="bestsellers[1].name"
-                :price="bestsellers[1].price"
-                :image="bestsellers[1].image"
-              />
+              <product-card classItem="best__item" :name="bestsellers[1].name" :price="bestsellers[1].price"
+                :image="bestsellers[1].image" />
 
-              <product-card
-                classItem="best__item"
-                :name="bestsellers[2].name"
-                :price="bestsellers[2].price"
-                :image="bestsellers[2].image"
-              />
+              <product-card classItem="best__item" :name="bestsellers[2].name" :price="bestsellers[2].price"
+                :image="bestsellers[2].image" />
             </div>
           </div>
         </div>
@@ -90,11 +72,12 @@
 </template>
 
 <script>
+import HeadTextComponent from "@/components/HeadTextComponent.vue";
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard },
+  components: { NavBarComponent, ProductCard, HeadTextComponent },
 
   data() {
     return {
@@ -118,6 +101,11 @@ export default {
           price: "6.99",
         },
       ],
+      headsText: [
+        {
+          text: "Everything You Love About Coffee"
+        }
+      ]
     };
   },
 };
