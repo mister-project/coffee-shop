@@ -106,7 +106,7 @@ export default {
           image: "coffee-1.jpg",
           name: "Solimo Coffee Beans 2kg",
           // country: 'Brazil',
-          price: "10.73",
+          price: 10.73,
         },
         {
           id: 1,
@@ -114,7 +114,7 @@ export default {
           image: "coffee-2.jpg",
           name: "Presto Coffee Beans 1kg",
           // country: 'Brazil',
-          price: "15.99",
+          price: 15.99,
         },
         {
           id: 2,
@@ -122,7 +122,7 @@ export default {
           image: "coffee-3.jpg",
           name: "AROMISTICO Coffee 1kg",
           // country: 'Brazil',
-          price: "6.99",
+          price: 6.99,
         },
         {
           id: 3,
@@ -130,7 +130,7 @@ export default {
           image: "coffee-1.jpg",
           mane: "Solimo Coffee Beans 2kg",
           // country: 'Brazil',
-          price: "10.73",
+          price: 10.73,
         },
         {
           id: 4,
@@ -138,7 +138,7 @@ export default {
           image: "coffee-2.jpg",
           name: "Solimo Coffee Beans 2kg",
           // country: 'Brazil',
-          price: "10.73",
+          price: 10.73,
         },
         {
           id: 5,
@@ -146,7 +146,7 @@ export default {
           image: "coffee-3.jpg",
           name: "Solimo Coffee Beans 2kg",
           // country: 'Brazil',
-          price: "10.73",
+          price: 10.73,
         },
       ],
       headsText: [
