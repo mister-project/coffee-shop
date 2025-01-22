@@ -9,18 +9,29 @@
           </div>
         </div>
         <!-- <h1 class="title-big">Our Coffee</h1> -->
-        <head-text-component classHeadText="title-big" :text="headsText[0].text" />
+        <head-text-component
+          classHeadText="title-big"
+          :text="headsText[0].text"
+        />
       </div>
     </div>
     <section class="shop">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img class="shop__girl" src="@/assets/img/coffee_girl.jpg" alt="girl" />
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_girl.jpg"
+              alt="girl"
+            />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
+            <img
+              class="beanslogo"
+              src="@/assets/logo/Beans_logo_dark.svg"
+              alt="Beans logo"
+            />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -41,7 +52,12 @@
           <div class="col-lg-4 offset-2">
             <form action="#" class="shop__search">
               <label class="shop__search-label" for="filter">Looking for</label>
-              <input id="filter" type="text" placeholder="start typing here..." class="shop__search-input" />
+              <input
+                id="filter"
+                type="text"
+                placeholder="start typing here..."
+                class="shop__search-input"
+              />
             </form>
           </div>
           <div class="col-lg-4">
@@ -58,8 +74,14 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card v-for="product in coffee" :key="product.id" :name="product.name" :price="product.price"
-                :image="product.image" classItem="shop__item" />
+              <product-card
+                v-for="card in coffee"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
+                classItem="shop__item"
+              />
             </div>
           </div>
         </div>
@@ -129,9 +151,9 @@ export default {
       ],
       headsText: [
         {
-          text: "Our Coffee"
-        }
-      ]
+          text: "Our Coffee",
+        },
+      ],
     };
   },
 };

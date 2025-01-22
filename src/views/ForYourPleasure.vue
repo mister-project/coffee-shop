@@ -9,18 +9,29 @@
         </div>
 
         <!-- Техт в шапке - H1 -->
-        <head-text-component classHeadText="title-big" :text="headsText[0].text" />
+        <head-text-component
+          classHeadText="title-big"
+          :text="headsText[0].text"
+        />
       </div>
     </div>
     <section class="shop">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl" />
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_goods.jpg"
+              alt="girl"
+            />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
+            <img
+              class="beanslogo"
+              src="@/assets/logo/Beans_logo_dark.svg"
+              alt="Beans logo"
+            />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -44,9 +55,14 @@
             <div class="shop__wrapper">
               <!-- <product-card classItem="shop__item" :name="goods[0].name" :price="goods[0].price"
                 :image="goods[0].image" /> -->
-              <product-card v-for="good in goods" :key="good.id" :name="good.name" :price="good.price"
-                :image="good.image" classItem="shop__item" />
-
+              <product-card
+                v-for="card in goods"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
+                classItem="shop__item"
+              />
             </div>
           </div>
         </div>
@@ -109,9 +125,9 @@ export default {
       ],
       headsText: [
         {
-          text: "For your pleasure"
-        }
-      ]
+          text: "For your pleasure",
+        },
+      ],
     };
   },
 };
