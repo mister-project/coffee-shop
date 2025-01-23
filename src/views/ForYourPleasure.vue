@@ -56,7 +56,7 @@
               <!-- <product-card classItem="shop__item" :name="goods[0].name" :price="goods[0].price"
                 :image="goods[0].image" /> -->
               <product-card
-                v-for="card in goods"
+                v-for="card in products.goods"
                 :key="card.id"
                 :name="card.name"
                 :price="card.price"
@@ -77,52 +77,13 @@ import ProductCard from "@/components/ProductCard.vue";
 
 export default {
   components: { NavBarComponent, ProductCard, HeadTextComponent },
+  computed: {
+    products() {
+      return this.$store.getters["getGoods"];
+    },
+  },
   data() {
     return {
-      goods: [
-        {
-          id: 0,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: 1,
-          image: "good-1.jpg",
-          name: "Presto Coffee Beans 1kg",
-          country: "Brazil",
-          price: 15.99,
-        },
-        {
-          id: 2,
-          image: "good-1.jpg",
-          name: "AROMISTICO Coffee 1kg",
-          country: "Brazil",
-          price: 6.99,
-        },
-        {
-          id: 3,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: 4,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brazil",
-          price: 10.73,
-        },
-        {
-          id: 5,
-          image: "good-1.jpg",
-          name: "Solimo Coffee Beans 2kg",
-          country: "Brazil",
-          price: 10.73,
-        },
-      ],
       headsText: [
         {
           text: "For your pleasure",

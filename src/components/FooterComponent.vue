@@ -39,34 +39,39 @@ import NavItem from "@/components/NavItem.vue";
 
 export default {
   components: { NavItem },
-  data() {
-    return {
-      links: {
-        footer: {
-          id: 0,
-          // text: '',
-          link: "/",
-          icon: "Logo_black.svg",
-        },
-        other: [
-          {
-            id: 1,
-            text: "Our coffee",
-            link: "/our-coffee",
-          },
-          {
-            id: 2,
-            text: "For your pleasure",
-            link: "/your-pleasure",
-          },
-          {
-            id: 3,
-            text: "Contact us",
-            link: "/contact-us",
-          },
-        ],
-      },
-    };
+  computed: {
+    links() {
+      return this.$store.getters["getFooterLinks"];
+    },
   },
+  // data() {
+  //   return {
+  //     links: {
+  //       footer: {
+  //         id: 0,
+  //         // text: '',
+  //         link: "/",
+  //         icon: "Logo_black.svg",
+  //       },
+  //       other: [
+  //         {
+  //           id: 1,
+  //           text: "Our coffee",
+  //           link: "/our-coffee",
+  //         },
+  //         {
+  //           id: 2,
+  //           text: "For your pleasure",
+  //           link: "/your-pleasure",
+  //         },
+  //         {
+  //           id: 3,
+  //           text: "Contact us",
+  //           link: "/contact-us",
+  //         },
+  //       ],
+  //     },
+  //   };
+  // },
 };
 </script>
