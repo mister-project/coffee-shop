@@ -40,7 +40,7 @@
                     class="form-control"
                     id="name-input"
                   />
-                  <span>{{ form.name }}</span>
+                  <!-- <span>{{ form.name }}</span> -->
                 </div>
               </div>
 
@@ -58,7 +58,7 @@
                     class="form-control"
                     id="email-input"
                   />
-                  <span>{{ form.email }}</span>
+                  <!-- <span>{{ form.email }}</span> -->
                 </div>
               </div>
 
@@ -73,7 +73,7 @@
                     class="form-control"
                     id="phone-input"
                   />
-                  <span>{{ form.phone }}</span>
+                  <!-- <span>{{ form.phone }}</span> -->
                 </div>
               </div>
 
@@ -93,7 +93,7 @@
                     rows="5"
                     placeholder="Leave your comments here"
                   ></textarea>
-                  <span>{{ form.message }}</span>
+                  <!-- <span>{{ form.message }}</span> -->
                 </div>
               </div>
 
