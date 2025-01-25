@@ -74,9 +74,7 @@
               <product-card
                 v-for="card in bestsellers"
                 :key="card.id"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
+                :card="card"
                 classItem="best__item"
               />
             </div>
