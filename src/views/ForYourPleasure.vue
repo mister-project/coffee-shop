@@ -73,6 +73,7 @@
 import HeadTextComponent from "@/components/HeadTextComponent.vue";
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { navigate } from "@/mixins/navigate";
 import goods from "@/store/goods";
 
 export default {
@@ -84,6 +85,8 @@ export default {
   },
   data() {
     return {
+      name: "goods",
+
       headsText: [
         {
           text: "For your pleasure",
@@ -91,11 +94,6 @@ export default {
       ],
     };
   },
-  methods: {
-    navigate(id) {
-      // console.log(id);
-      this.$router.push({ name: "goods", params: { id: id } });
-    },
-  },
+  mixins: [navigate],
 };
 </script>

@@ -44,7 +44,9 @@
             </div>
             <div class="shop__point">
               <span>Price:</span>
-              <span class="shop__point-price"> {{ card.price }}$</span>
+              <span class="shop__point-price">
+                {{ card.price | addCurrensy }}</span
+              >
             </div>
           </div>
         </div>
@@ -58,6 +60,7 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 
 export default {
   components: { NavBarComponent },
+
   computed: {
     pageName() {
       return this.$route.name;
