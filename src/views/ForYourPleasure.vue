@@ -93,7 +93,8 @@ export default {
   },
   methods: {
     navigate(id) {
-      console.log(id);
+      // console.log(id);
+      this.$router.push({ name: "goods", params: { id: id } });
     },
   },
 };

@@ -114,7 +114,8 @@ export default {
   },
   methods: {
     navigate(id) {
-      console.log(id);
+      // console.log(id);
+      this.$router.push({ name: "coffee", params: { id: id } });
     },
   },
 };
