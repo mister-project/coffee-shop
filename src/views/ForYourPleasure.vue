@@ -75,13 +75,23 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import { navigate } from "@/mixins/navigate";
 import goods from "@/store/goods";
+import GoodsItemView from "./GoodsItemView.vue";
 
 export default {
-  components: { NavBarComponent, ProductCard, HeadTextComponent },
+  components: {
+    NavBarComponent,
+    ProductCard,
+    HeadTextComponent,
+    GoodsItemView,
+  },
+
   computed: {
     goods() {
       return this.$store.getters["getGoods"];
     },
+
+    // pageName() {
+    //   return this.$route.name;
   },
   data() {
     return {

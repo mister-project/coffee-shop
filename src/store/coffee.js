@@ -56,7 +56,12 @@ const coffee = {
     getCoffee(state) {
       return state.coffee;
     },
-    getProductById(state) {
+    // getProductById(state) {
+    //   return (id) => {
+    //     return state.coffee.find((card) => card.id === +id);
+    //   };
+    // },
+    getCoffeeById(state) {
       return (id) => {
         return state.coffee.find((card) => card.id === +id);
       };
