@@ -65,9 +65,7 @@ export default {
     pageName() {
       return this.$route.name;
     },
-    // card() {
-    //   return this.$store.getters["getProductById"](this.$route.params.id);
-    // },
+   
     card() {
       const pageGetter =
         this.pageName === "coffee" ? "getCoffeeById" : "getGoodsById";
