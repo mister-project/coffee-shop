@@ -107,10 +107,20 @@
                     {{ error.$message }}
                   </span>
                 </div>
-                <pre>
-                  {{ v$.message }}
-                </pre>
               </div>
+              <div>
+                <label for="check-input"></label>
+                <input v-model="v$.check.$model" type="checkbox" name="check" />
+                <span v-for="error in v$.check.$errors" :key="error.$uid">
+                  {{ error.$message }}
+                </span>
+
+                <span> Согласен с договором оферты</span>
+              </div>
+              <pre>
+                <!-- {{ v$ }} -->
+
+              </pre>
 
               <div class="row">
                 <div class="col">
@@ -136,9 +146,7 @@ import { useVuelidate } from "@vuelidate/core";
 import { required, email, maxLength } from "@vuelidate/validators";
 import { helpers } from "@vuelidate/validators";
 
-const minLength = (value) => {
-  return value.length > 5;
-};
+import { minLength } from "../validators/minLength";
 
 export default {
   setup() {
@@ -159,6 +167,7 @@ export default {
       email: "",
       phone: "",
       message: "",
+      check: "",
     };
   },
   validations() {
@@ -174,11 +183,24 @@ export default {
           minLength
         ),
       },
+      check: { required },
     };
   },
 
   methods: {
-    submit() {},
+    async submit() {
+      const isFormCorrect = await this.v$.$validate();
+      // you can show some extra alert to the user or just leave the each field to show it's `$errors`.
+      if (!isFormCorrect) return;
+      // actually submit form
+      console.log({
+        name: this.name,
+        email: this.email,
+        phone: this.phone,
+        message: this.message,
+        check: this.check,
+      });
+    },
   },
 };
 </script>
