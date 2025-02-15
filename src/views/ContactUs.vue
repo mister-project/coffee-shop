@@ -126,10 +126,6 @@
                   </button>
                 </div>
               </div>
-              <pre>
-              {{ v$.check.$model }}
-            </pre
-              >
             </form>
           </div>
         </div>
@@ -144,7 +140,7 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
 import { useVuelidate } from "@vuelidate/core";
-import { required, email, maxLength } from "@vuelidate/validators";
+import { required, email, maxLength, sameAs } from "@vuelidate/validators";
 import { helpers } from "@vuelidate/validators";
 
 import { minLength } from "../validators/minLength";
@@ -168,7 +164,7 @@ export default {
       email: "",
       phone: "",
       message: "",
-      check: "",
+      check: true,
     };
   },
   validations() {
@@ -184,7 +180,9 @@ export default {
           minLength
         ),
       },
-      check: { required },
+      check: {
+        isValid: helpers.withMessage("Отметьте галочку", sameAs(true)),
+      },
     };
   },
 
@@ -192,7 +190,7 @@ export default {
     async submit() {
       const isFormCorrect = await this.v$.$validate();
       // you can show some extra alert to the user or just leave the each field to show it's `$errors`.
-      if (!isFormCorrect && this.check == false) return;
+      if (!isFormCorrect) return;
       // actually submit form
       console.log({
         name: this.name,
