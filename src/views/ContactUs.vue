@@ -117,10 +117,7 @@
 
                 <span> Согласен с договором оферты</span>
               </div>
-              <pre>
-                <!-- {{ v$ }} -->
-
-              </pre>
+              <pre></pre>
 
               <div class="row">
                 <div class="col">
@@ -129,6 +126,10 @@
                   </button>
                 </div>
               </div>
+              <pre>
+              {{ v$.check.$model }}
+            </pre
+              >
             </form>
           </div>
         </div>
@@ -191,7 +192,7 @@ export default {
     async submit() {
       const isFormCorrect = await this.v$.$validate();
       // you can show some extra alert to the user or just leave the each field to show it's `$errors`.
-      if (!isFormCorrect) return;
+      if (!isFormCorrect && this.check == false) return;
       // actually submit form
       console.log({
         name: this.name,
